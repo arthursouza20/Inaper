@@ -1,0 +1,28 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+#btn-backsite{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+#remember{
+    text-align: right;
+}
+
+#btn-loginvolunteer{
+    margin-top: 5px;
+}

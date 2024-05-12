@@ -1,0 +1,10 @@
+.navbar {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+}
+a {
+    color: #222222;
+    /* text-transform: uppercase; */
+    font-weight: 500;
+}
