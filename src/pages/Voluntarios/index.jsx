@@ -6,29 +6,29 @@ import { Axios } from "axios";
 
 function Voluntarios() {
 
-    const addVoluntario = (data) => {
-        Axios.post("http://localhost:3001/create", {
-            nome: data.nomeVoluntario,
-            usuario: data.usuarioVoluntario,
-            telefone: data.telefoneVoluntario,
-            data_nascimento: data.dataNascVoluntario,
-            funcao: data.funcaoVoluntario
-        }).then((response) => {
-            console.log(response);
-        });
-    }
+//     const addVoluntario = (data) => {
+//         Axios.post("http://localhost:3001/create", {
+//             nome: data.nomeVoluntario,
+//             usuario: data.usuarioVoluntario,
+//             telefone: data.telefoneVoluntario,
+//             data_nascimento: data.dataNascVoluntario,
+//             funcao: data.funcaoVoluntario
+//         }).then((response) => {
+//             console.log(response);
+//         });
+//     }
 
-    const editVoluntario = (data) => {
-        Axios.put("http://localhost:3001/update", {
-            nome: data.nomeVoluntario,
-            usuario: data.usuarioVoluntario,
-            telefone: data.telefoneVoluntario,
-            data_nascimento: data.dataNascVoluntario,
-            funcao: data.funcaoVoluntario
-        }).then((response) => {
-            console.log(response);
-        });
-    }
+//     const editVoluntario = (data) => {
+//         Axios.put("http://localhost:3001/update", {
+//             nome: data.nomeVoluntario,
+//             usuario: data.usuarioVoluntario,
+//             telefone: data.telefoneVoluntario,
+//             data_nascimento: data.dataNascVoluntario,
+//             funcao: data.funcaoVoluntario
+//         }).then((response) => {
+//             console.log(response);
+//         });
+//     }
 
     // const deleteVoluntario = (e) => {
     //     e.preventDefault();
