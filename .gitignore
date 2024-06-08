@@ -25,4 +25,5 @@ backend/.env
 *.sw?
 
 node_modules
+backend/node_modules
 .env
