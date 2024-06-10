@@ -1,22 +1,31 @@
-const voluntersModel = require('../models/voluntersModels');
+const voluntersModel = require("../models/voluntersModels");
 
-const getAll = async (_request,reponse) => {
-    
-    const volunters = await voluntersModel.getAll();
-    reponse.status(200).json(volunters);
-}
+const getAll = async (request, response) => {
+  const volunters = await voluntersModel.getAll();
+  response.status(200).json(volunters);
+};
 
 const createVolunter = async (request, reponse) => {
-    const CreatedVolunters = await voluntersModel.createVolunter(request.body);
+  const CreatedVolunters = await voluntersModel.createVolunter(request.body);
 
-    // const dateUTC = new Date(Date.now()).toUTCString();
-    // const { nome, usuario, telefone, data_Nascimento, funcao } = request.body;
-    
-    return reponse.status(201).json(CreatedVolunters);
-}
+  return reponse.status(201).json(CreatedVolunters);
+};
 
+const deleteVolunter = async (request, reponse) => {
+  const deletedVolunter = await voluntersModel.deleteVolunter(request.body);
+
+  return reponse.status(201).json(deletedVolunter);
+};
+
+const editVolunter = async (request, reponse) => {
+  const updatedVolunter = await voluntersModel.editVolunter(request.body);
+
+  return reponse.status(201).json(updatedVolunter);
+};
 
 module.exports = {
-    getAll,
-    createVolunter,
+  getAll,
+  createVolunter,
+  deleteVolunter,
+  editVolunter,
 };
