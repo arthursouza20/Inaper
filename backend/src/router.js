@@ -9,6 +9,9 @@ const servicesMiddleware = require("./middlewares/servicesMiddleware");
 const usersControllers = require("./controllers/usersControllers");
 const usersMiddleware = require("./middlewares/usersMiddleware");
 
+const activitiesControllers = require("./controllers/activitiesControllers");
+const activitiesMiddleware = require("./middlewares/activitiesMiddleware");
+
 const router = express.Router();
 
 router.get("/volunters", voluntersControllers.getAll); // Rota para buscar todos os voluntários
@@ -51,20 +54,40 @@ router.put(
   servicesControllers.editService
 ); // Rota para editar um serviço
 
-router.get("/users", usersControllers.getAll); // Rota para buscar todos os serviços
+router.get("/users", usersControllers.getAll); // Rota para buscar todos os usuários
 
 router.post(
   "/users",
   usersMiddleware.validateBody,
   usersControllers.createUser
-); // Rota para criar um novo serviço
+); // Rota para criar um novo usuário
 
 router.delete(
   "/users",
   usersMiddleware.validateBody,
   usersControllers.deleteUser
-); // Rota para excluir um serviço
+); // Rota para excluir um usuário
 
-router.put("/users", usersMiddleware.validateBody, usersControllers.editUser); // Rota para editar um serviço
+router.put("/users", usersMiddleware.validateBody, usersControllers.editUser); // Rota para editar um usuário
+
+router.get("/activities", activitiesControllers.getAll); // Rota para buscar todas as atividades
+
+router.post(
+  "/activities",
+  activitiesMiddleware.validateBody,
+  activitiesControllers.createActivity
+); // Rota para criar uma nova atividade
+
+router.delete(
+  "/activities",
+  activitiesMiddleware.validateBody,
+  activitiesControllers.deleteActivity
+); // Rota para excluir uma atividade
+
+router.put(
+  "/activities",
+  activitiesMiddleware.validateBody,
+  activitiesControllers.editActivity
+); // Rota para editar uma atividade
 
 module.exports = router;
